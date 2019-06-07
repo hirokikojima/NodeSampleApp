@@ -1,0 +1,10 @@
+version: "2"
+
+services:
+  app:
+    build: ./app
+    image: "nodesampleapp/app"
+    ports:
+      - "9000:80"
+    volumes:
+      - "./app:/app"
