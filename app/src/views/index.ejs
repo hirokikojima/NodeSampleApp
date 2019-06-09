@@ -6,5 +6,35 @@
     </head>
     <body>
         <h1>NodeSampleApp</h1>
+        <form action="/" method="get">
+            <label for="zipcode">zipcode</label>
+            <input type="text" name="zipcode" id="zipcode" placeholder="xxx-xxxx"/>
+            <input type="submit" value="send" />
+        </form>
+
+        <% if (typeof(data) !== 'undefined') { %>
+        <table>
+            <tr>
+                <th>pref</th>
+                <td><%= data.pref %></td>
+            </tr>
+            <tr>
+                <th>address</th>
+                <td><%= data.address %></td>
+            </tr>
+            <tr>
+                <th>city</th>
+                <td><%= data.city %></td>
+            </tr>
+            <tr>
+                <th>town</th>
+                <td><%= data.town %></td>
+            </tr>
+            <tr>
+                <th>fullAddress</th>
+                <td><%= data.fullAddress %></td>
+            </tr>
+        </table>
+        <% } %>
     </body>
 </html>

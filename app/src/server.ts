@@ -1,16 +1,12 @@
 import * as Express from 'express';
+import indexController from './controllers/indexController';
 
 const app = Express();
 
 app.set('views', 'src/views');
 app.set('view engine', 'ejs');
 
-app.get(
-    '/',
-    (req: Express.Request, res: Express.Response) => {
-        // return res.send('Hello world.');
-        return res.render('index.ejs');
-    });
+app.get('/', indexController);
 
 app.listen(
     3000,
